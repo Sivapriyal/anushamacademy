@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anusham Academy | Physics, NEET & JEE Tutorial Center – Thanjavur</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: radial-gradient(circle at top left, #fff7f0, #f0f4ff);
+            color: #222;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(120deg, #064939,#9acee1,#064738);
+            padding: 0.8rem 6%;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+            justify-content:first baseline
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-block {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .logo-sub {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        nav a {
+            margin-left: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 0.8rem 0.8rem;
+            border-radius: 999px;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.18);
+            transform: translateY(-1px);
+        }
+        /* HERO */
+        .hero {
+            padding: 1.5rem 6% 2rem;
+            display: grid;
+            grid-template-columns: minmax(0, 1.4fr) minmax(1.6, 2fr);
+            gap: 2rem;
+            text-align:justify;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            line-height: 1.2;
+            color: #261447;
+            text-align:center;
+        }
+    
+        .hero-highlight {
+            background: linear-gradient(90deg, #227b73, #86d0c6);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+        .hero-light {
+            background: linear-gradient(90deg,#227b73, #86d0c6);
+            -webkit-background-clip: text;
+            color: transparent;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #1c1b1b;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.0rem;
+            justify-content: center;
+        }
+
+        .badge {
+            font-size: 1.0rem;
+            padding: 0.1rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.9);
+            border: 1px solid rgba(0,0,0,0.06);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        }
+
+        .hero-buttons {
+            margin-top: 0.3rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #043b2a, #bbefe8);
+            color: #fff;
+            padding: 0.8rem 1.6rem;
+            border: none;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(2, 45, 33, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(9, 46, 46, 0.12);
+        }
+
+        .btn-outline {
+             background: linear-gradient(135deg, #043b2a, #bbefe8);
+            color: #fff;
+            padding: 0.8rem 1.6rem;
+            border:none;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 8px 18px rgba(2, 45, 33, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-outline:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(9, 46, 46, 0.12);
+        }
+
+
+        /* MAIN SECTIONS */
+        main {
+            padding: 0.2rem 6% 0.3rem;
+        }
+
+        section {
+            margin-top: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #261447;
+            margin-bottom: 0.4rem;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ABOUT / VISION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: minmax(1.6, 1.2fr) minmax(1.6, 1.2fr);
+            gap: 9.9rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 10px 20px 20px 40px;
+            box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+            justify-items: center;
+            padding-right: 19px;
+
+        }
+
+        .pill-label {
+            display: inline-block;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 0.2rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(221,36,118,0.08);
+            color: #4d0a0a;
+            margin-bottom: 0.5rem;
+            font-weight: 900;
+            margin-left:37px;
+            margin-top: 10px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: #444;
+            margin-bottom: 0.4rem;
+            border-radius: 8px;
+        }
+
+        .vision-text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #261447;
+            margin-top: 0.2rem;
+        }
+
+        .highlight-text {
+            font-weight: 500;
+           margin-left: 40px;
+           font-size: 15px;
+        }
+
+        .about-list {
+            margin-top: 0.2rem;
+            list-style: none;
+        }
+
+        .about-list li {
+            font-size: 0.86rem;
+            margin-bottom: 0.25rem;
+            position: relative;
+            padding-left: 1.1rem;
+        }
+
+        .about-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: -1px;
+            color: #dd2476;
+        }
+
+        .tag-strip {
+            margin-top: 0.7rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tag {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            border: 1px dashed rgba(0,0,0,0.15);
+            background: #f8f9ff;
+        }
+
+        /* FEATURES */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            gap: 1.2rem;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            border-radius: 1rem;
+            padding: 1rem;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+            border-top: 5px solid transparent;
+        }
+
+        .feature-card:nth-child(1) { border-color: #227b73; }
+        .feature-card:nth-child(2) { border-color: #30cfd0; }
+        .feature-card:nth-child(3) { border-color: #227b73; }
+        .feature-card:nth-child(4) { border-color: #227b73; }
+        .feature-card:nth-child(5) { border-color: #30cfd0; }
+        .feature-card:nth-child(6){ border-color: #227b73; }
+        
+
+        .feature-title {
+            font-size: 0.98rem;
+            font-weight: 700;
+            color: #261447;
+            margin-bottom: 0.4rem;
+        }
+        .feature{
+            margin-top: 34px;
+        }
+
+        .feature-text {
+            font-size: 0.86rem;
+            color: #555;
+        }
+        .contact{
+            margin-top: 12px;
+        }
+        /* COURSES */
+        .course{
+            margin-left: 42px;
+        }
+
+        .heros{
+            margin-top: 20px;
+        }
+
+         .hero-note {
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .hero-card {
+            background: #ffffff;
+            border-radius: 1.2rem;
+            padding: 1.3rem 1.4rem;
+            box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+             background: linear-gradient(135deg, #043b2a, #bbefe8);
+            color: #fff;
+            padding: 0.8rem 1.6rem;
+            border: none;
+            border-radius:3px;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+
+        .hero-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero-card-title {
+            font-size: 19px;
+            font-weight: 700;
+            color: #0f0325;
+        }
+        .hero-card p {
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 0.4rem;
+        }
+        .Programs {
+              margin-top: 22px;
+        }
+        .faculty{
+            display: grid;
+            grid-template-columns: minmax(0.6, 1.2fr) minmax(1.6, 1.2fr);
+            gap:0.2rem;
+            background: #ffffff;
+            padding: 10px 20px 20px 40px;
+            border-radius: 8px;
+            box-shadow:0 10px 26px rgba(0,0,0,0.08);
+            justify-content:left;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.3fr) minmax(0, 1.1fr);
+            gap: 1.5rem;
+        }
+        .contact h2{
+            color:#261447;
+            font-size: 29px;
+        }
+
+        .contact-label {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #999;
+        }
+
+        .contact-value {
+            font-size: 0.96rem;
+            font-weight: 600;
+            color: #261447;
+        }
+
+        .contact-note {
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 0.5rem;
+        }
+
+        .contact-form {
+            margin-top: 0.8rem;
+            display: grid;
+            gap: 0.6rem;
+        }
+
+        .contact-form label {
+            font-size: 0.82rem;
+            color: #555;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem 0.7rem;
+            border-radius: 0.6rem;
+            border: 1px solid rgba(2,3,5,0.12);
+            font-size: 0.86rem;
+            outline: none;
+            transition: border 0.2s, box-shadow 0.2s;
+        }
+
+        .info-card-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+
+        .info-card p {
+            font-size: 0.86rem;
+            color: #fdfdfd;
+        }
+
+        .info-pill {
+            display: inline-block;
+            margin-top: 0.7rem;
+            font-size: 0.8rem;
+            padding: 0.25rem 0.7rem;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.15);
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(120deg, #064939,#9acee1,#064738);
+            color: #fefefe;
+            padding: 1.2rem 6% 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+            font-size: 0.83rem;
+            justify-content: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+
+        .footer-bottom {
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="nav">
+        <div class="logo-block">
+            <span class="logo-title">ANUSHAM ACADEMY</span>
+            <span class="logo-sub">Physics | Class 9–12 | NEET | JEE | Thanjavur</span>
+        </div>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#features">Features</a>
+            <a href="#Program">Programs</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+        <h1>
+            A <span class="hero-highlight">100% result‑oriented</span><br>
+            unique center for PHYSICS with <span class="hero-light">Nominal fees</span> at Thanjavur.
+        </h1>
+        <p>
+            Anusham Academy is a dedicated, student‑friendly space for BOARD EXAMS, NEET/JEE and Foundation Learning –
+            with simplified teaching, intensive coaching and personal care.
+        </p>
+
+        <div class="hero-badges">
+            <span class="badge">Concept‑oriented Teaching</span>
+            <span class="badge">NEET & JEE focused</span>
+            <span class="badge">Class 9–12 • All boards</span>
+            <span class="badge">Nominal fees </span>
+            <span class="badge">Friendly approach</span>
+        </div>
+
+        <div class="hero-buttons">
+            <button class="btn-primary" onclick="window.location.href='tel:9994418955'">
+                Call now: 9994418955
+            </button>
+            <button class="btn-outline" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                Enquire about admissions
+            </button>
+        </div>
+</section>
+    
+
+<main>
+    <!-- ABOUT / VISION -->
+    <section id="about">
+        <h2 class="section-title">About Anusham Academy</h2>
+        <span class="pill-label"><b>VISION</b></span><span class="highlight-text"><strong>To make everyone successful</strong> </span>
+                
+        <div class="about-grid">
+            <div class="card">
+
+                <p style="margin-top:0.7rem;">
+                    We believe that with the right guidance, disciplined practice and a friendly learning space,
+                    ,will <strong>make everyone successful</strong>  
+                </p>
+
+                <ul class="about-list">
+                    <li>Strong focus on <strong>concept clarity</strong> before problem‑solving.</li>
+                    <li>Regular tests, feedback, and <strong>progress tracking</strong> for each student.</li>
+                    <li><strong>Counselling and mentoring</strong> to control anxiety .</li>
+                    <li>Support for <strong>TN State Board, CBSE, ICSE and other boards</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIAL FEATURES -->
+    <section id = "features">
+        <div class="feature">
+        <h2 class="section-title">Special features of Anusham Academy</h2>
+        <p class="section-subtitle">
+            Carefully designed features to ensure clarity, discipline, comfort, and high performance – especially in Board/competitive exams.
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-title">Concept‑oriented Physics teaching</div>
+                <div class="feature-text">
+                    Deep focus on understanding concepts through <b>Day to Day life examples </b>with visual explanations.
+                </div>
+            </div>
+
+
+            <div class="feature-card">
+                <div class="feature-title">Counselling</div>
+                <div class="feature-text">
+                    Academic and basic career counselling to handle <b>stress and stay energetic</b>.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">Simplified teaching methodology</div>
+                <div class="feature-text">
+                    Complex topics are broken into simple, understandable parts using <b>real‑time examples </b>through known to unknown concepts.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">Intensive coaching</div>
+                <div class="feature-text">
+                    Regular classes, revision sessions,<b> practice tests </b>and doubt‑clearing for sustained improvement.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">Friendly approach</div>
+                <div class="feature-text">
+                    A <b>supportive, approachable environment </b>where students feel free to ask doubts without hesitation.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-title">Career guidance</div>
+                <div class="feature-text">
+                    Imparting <b>support and awareness </b>for higher and continuous education. 
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- COURSES -->
+    <section id="Program">
+        <div class="Programs">
+        <h2 class="section-title">Our Programs</h2>
+        <p class="section-subtitle">
+            From school tuitions to NEET & JEE preparation – flexible, focused programs for different levels.
+        </p>
+        <div class="course">
+    <ul>
+    <li>Foundation classes</li>
+    <li>Board exam preparation for class 9,10,11,12 -> CBSE, TN-State Board, ICSE and other Boards</li>
+    <li>Support for NEET/JEE/other competitive exams</li>
+    <li>Polytechnic / Engineering / Arts & Science Physics Subjects</li>
+  </ul>
+</div>
+</div>
+    </section>
+
+    
+</section>
+<div class=heros>
+        <div class="hero-card-header">
+            <h2 class="section-title">Faculty</h2>
+        </div>
+        <p>
+            <div class ="faculty"><strong>Mr.Nataranjan Karikalan</strong><br><div class="highlight-text">Former professor of Physics , Hindustan University, Chennai , with <b>25+ years</b> of academic and administrative experience across Schools, Polytechnics, Arts & Science, Engineering colleges and University level.</div>
+        </p>
+        </div>
+<div class="contact" id="contact">
+  <h2 class="section-title">Contact & Admissions</h2>
+  <p>
+    📞 <strong>Phone:</strong> <a href="tel:9994418955">+91 9994418955</a>, <a href="tel:9841492294">+91 9841494294</a><br>
+    📧 <strong>Email:</strong> <a href="mailto:anushamacademy@gmail.com">anushamacademytnj@gmail.com</a><br>
+    📍 <strong>Location:</strong> First Main Road,Arulanthar Nagar,Thanjavur, Tamil Nadu<br>
+    
+  </p>
+  
+</div>
+
+</main>
+
+<footer>
+    <div class="footer-top">
+        <div>© <span id="year"></span> Anusham Academy, Thanjavur – Physics, NEET & JEE Tutorial Center</div>
+        
+    </div>
+    
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
